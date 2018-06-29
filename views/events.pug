@@ -1,0 +1,30 @@
+extends layoutBS
+
+block content
+  h1 Add a CookieJar Event
+  form(method="post" action="saveEvent")
+    .formGroup
+      label Name :
+      input(type="text" name="name")
+    .formGroup
+      label Location :
+      input(type="text" name="location")
+    .formGroup
+      label Date :
+      input(type="text" name="date")
+    .formGroup
+      label Time :
+      input(type="text" name="time")
+    .formGroup
+      label Type :
+      input(type="text" name="type")
+    .formGroup
+      label Description :
+      textarea(name="description" rows="1")
+    input(type="submit")
+  hr
+  h1 List of All Events
+  form(method="post" action="deleteEvent")
+    ol each event in events
+    input(type="submit" value="Delete checked items")
+    hr

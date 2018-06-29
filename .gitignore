@@ -1,0 +1,5 @@
+node_modules
+auth.js
+data
+mongodb
+.DS_Store
